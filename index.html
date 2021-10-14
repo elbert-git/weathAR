@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	 
+	<!-- import aframe -->
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<!-- we import arjs version without NFT but with marker + location based support -->
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	<!-- this script 'aframe extras' is required for animations-->
+	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="margin : 0px; overflow: hidden;">
+	<a-scene embedded arjs>
+		<a-asset>
+			<a-asset-item
+				id="rain"
+				response-type="arraybuffer"
+				src="./Assets/GLTFs/Rain/rainseq.gltf"
+				></a-asset-item>
+		</a-asset>
+		<a-marker preset = "hiro">
+			<a-entity
+				gltf-model="#rain"
+				animation-mixer="clip:ArmatureAction; loop:repeat;"
+				></a-entity>
+			<a-entity
+				rotation="-90 0 0"
+				text="value: Hello World;"
+				></a-entity>
+		</a-marker>
+		<a-entity camera></a-entity>
+	</a-scene>
+	<!-- my scripts -->
+	<script src="./index.js"></script>
+</body>
+</html>
