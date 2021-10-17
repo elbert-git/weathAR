@@ -15,21 +15,20 @@
 <body style="margin : 0px; overflow: hidden;">
 	<a-scene embedded arjs>
 		<a-asset>
-			<a-asset-item
-				id="rain"
-				response-type="arraybuffer"
-				src="./Assets/GLTFs/Rain/rainseq.gltf"
-				></a-asset-item>
+			<!-- textures go here -->
+			<img id="rain" src="./Assets/PNGs/Rain.png" alt="">
+			<img id="sun" src="./Assets/PNGs/Sun.png" alt="">
+			<img id="cloud" src="./Assets/PNGs/Cloud.png" alt="">
+			<img id="banner" src="./Assets/PNGs/Banner.png" alt="">
+			<img id="thermo" src="./Assets/PNGs/Thermo.png" alt="">
+			<img id="cloudSun" src="./Assets/PNGs/CloudSun.png" alt="">
+			<img id="doubleCloud" src="./Assets/PNGs/DoubleCloud.png" alt="">
 		</a-asset>
 		<a-marker preset = "hiro">
-			<a-entity
-				gltf-model="#rain"
-				animation-mixer="clip:ArmatureAction; loop:repeat;"
-				></a-entity>
-			<a-entity
+			<a-plane
+				material="src:#rain"
 				rotation="-90 0 0"
-				text="value: Hello World;"
-				></a-entity>
+				></a-plane>
 		</a-marker>
 		<a-entity camera></a-entity>
 	</a-scene>
