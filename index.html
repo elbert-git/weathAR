@@ -34,7 +34,7 @@
 			<img id="cloudSun" src="./Assets/PNGs/cloudsun.png" alt="">
 			<img id="doubleCloud" src="./Assets/PNGs/doublecloud.png" alt="">
 		</a-asset>
-		<a-marker type="barcode" value='6' smooth="true" smoothCount=15 smoothTolerance=20>
+		<a-marker type="barcode" value='6' smooth="true" smoothCount=15 smoothTolerance=20 smoothThreshold=3 changeMatrixMode="cameraTransformMatrix">
 			<a-entity id="info-banner" scale="1 1 1">
 				<a-plane
 						material="src: #banner; roughness:0; transparent:true; alphatest:0.5"
