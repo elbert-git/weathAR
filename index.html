@@ -32,10 +32,18 @@
 			<img id="cloudSun" src="./Assets/PNGs/cloudsun.png" alt="">
 			<img id="doubleCloud" src="./Assets/PNGs/doublecloud.png" alt="">
 		</a-asset>
-		<a-marker type="barcode" value='6'>
+		<a-marker type="barcode" value='6' smoothCount=0 smoothTolerance=0.0001>
+			<a-entity id="info-banner" scale="1 1 1">
+				<a-plane
+						material="src: #banner; roughness:0; transparent:true; alphatest:0.5"
+						position="0 1.2 -4"
+						rotation="-90 0 0"
+						scale="10 10 10"
+					></a-plane>
+			</a-entity>
 			<a-entity id="sunny" scale="1 1 1">
 			</a-entity>
-			<a-entity id="rainy" scale="1 1 1">
+			<a-entity id="rainy" scale="0 0 0">
 				<a-plane
 						material="src: #cloud; roughness:0; transparent:false; alphaTest:0.5"
 						position="-4 1 -8"
@@ -56,6 +64,18 @@
 					></a-plane>
 			</a-entity>
 			<a-entity id="cloudy" scale="1 1 1">
+				<a-plane
+						material="src: #cloud; roughness:0; transparent:false; alphaTest:0.5"
+						position="-4 1 -8"
+						rotation="-90 0 0"
+						scale="7 7 7"
+					></a-plane>
+				<a-plane
+						material="src: #doubleCloud; roughness:0; transparent:false; alphatest:0.5"
+						position="4 1 -8"
+						rotation="-90 0 0"
+						scale="7 7 7"
+					></a-plane>
 			</a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
