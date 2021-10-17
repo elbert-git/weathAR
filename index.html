@@ -20,6 +20,7 @@
 			debugUIEnabled: false;
 			detectionMode: mono_and_matrix; 
 			matrixCodeType: 3x3;'
+			renderer="antialias: true; logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;"
 		>
 		<a-asset>
 			<!-- textures go here -->
@@ -28,15 +29,34 @@
 			<img id="cloud" src="./Assets/PNGs/cloud.png" alt="">
 			<img id="banner" src="./Assets/PNGs/banner.png" alt="">
 			<img id="thermo" src="./Assets/PNGs/thermo.png" alt="">
-			<img id="cloudSun" src="./Assets/PNGs/cloudSun.png" alt="">
-			<img id="doubleCloud" src="./Assets/PNGs/doubleCloud.png" alt="">
+			<img id="cloudSun" src="./Assets/PNGs/cloudsun.png" alt="">
+			<img id="doubleCloud" src="./Assets/PNGs/doublecloud.png" alt="">
 		</a-asset>
 		<a-marker type="barcode" value='6'>
-			<a-plane
-				id="test"
-				material="src:#rain"
-				rotation="-90 0 0"
-				></a-plane>
+			<a-entity id="sunny" scale="1 1 1">
+			</a-entity>
+			<a-entity id="rainy" scale="1 1 1">
+				<a-plane
+						material="src: #cloud; roughness:0; transparent:false; alphaTest:0.5"
+						position="-4 1 -8"
+						rotation="-90 0 0"
+						scale="7 7 7"
+					></a-plane>
+				<a-plane
+						material="src: #doubleCloud; roughness:0; transparent:false; alphaTest:0.5"
+						position="4 1 -8"
+						rotation="-90 0 0"
+						scale="7 7 7"
+					></a-plane>
+				<a-plane
+						material="src: #rain; roughness:0; transparent:false; alphaTest:0.5"
+						position="0 0 -2"
+						rotation="-90 0 0"
+						scale="14 14 14"
+					></a-plane>
+			</a-entity>
+			<a-entity id="cloudy" scale="1 1 1">
+			</a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
 	</a-scene>

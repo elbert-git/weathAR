@@ -59,4 +59,4 @@ $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=singapore&appid=e12
  
  
 //test to see if we change size
-let testEl = document.getElementById("test").setAttribute('scale', {x:5, y:5, z:5})
+// let testEl = document.getElementById("test").setAttribute('scale', {x:5, y:5, z:5});
