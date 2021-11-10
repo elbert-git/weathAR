@@ -34,65 +34,86 @@
 			<img id="thermo" src="./Assets/PNGs/thermo.png" alt="">
 			<img id="cloudSun" src="./Assets/PNGs/cloudsun.png" alt="">
 			<img id="doubleCloud" src="./Assets/PNGs/doublecloud.png" alt="">
+			<img id="boySunny" src="./Assets/PNGs/boySunny.png" alt="">
+			<img id="boyRainy" src="./Assets/PNGs/boyRainy.png" alt="">
+			<img id="boyCloudy" src="./Assets/PNGs/boyCloudy.png" alt="">
 		</a-asset>
 		<a-marker type="pattern" preset="custom" url="./Assets/pattern-pattern.patt" smooth="true" smoothCount=15 smoothTolerance=20 smoothThreshold=3 changeMatrixMode="cameraTransformMatrix">
 			<a-entity class="root" scale="0.2 0.2 0.2" rotation="0 0 0">
 				<a-entity id="sunny" scale="1 1 1">
 					<a-plane
-							material="src: #sun; roughness:0; transparent:true; alphatest:0.5"
-							position="-4 1 -8"
-							rotation="-90 0 0"
-							scale="10 10 10"
-						></a-plane>
-					<a-plane
-							material="src: #cloud; roughness:0; transparent:false; alphaTest:0.5"
-							position="1.5 1 -6.5"
+							material="src: #doubleCloud; alphaTest:0.7; roughness:0; transparent:true; depthWrite: false;"
+							position="4 1 -8"
 							rotation="-90 0 0"
 							scale="7 7 7"
 						></a-plane>
 					<a-plane
-							material="src: #doubleCloud; roughness:0; transparent:false; alphaTest:0.5"
-							position="4 1 -8"
+							material="src: #sun; roughness:0; depthWrite: false; transparent:true; alphaTest:0.5;"
+							position="-4 0.3 -8"
+							rotation="-90 0 0"
+							scale="10 10 10"
+						></a-plane>
+					<a-plane
+							material="src: #cloud; roughness:0; transparent:true; depthWrite: false; alphaTest:0.9;"
+							position="1.5 1.2 -6.5"
+							rotation="-90 0 0"
+							scale="7 7 7"
+						></a-plane>
+					<a-plane
+							material="src: #boySunny; roughness:0; transparent:true; depthWrite: false; alphaTest:0.5"
+							position="0 1 1"
 							rotation="-90 0 0"
 							scale="7 7 7"
 						></a-plane>
 				</a-entity>
 				<a-entity id="rainy" scale="0 0 0">
 					<a-plane
-							material="src: #cloud; roughness:0; depthWrite: false;transparent:false; alphaTest:0.5"
+							material="src: #cloud; roughness:0; depthWrite: false; transparent:false; alphaTest:0.5"
 							position="-4 1 -8"
 							rotation="-90 0 0"
 							scale="7 7 7"
 						></a-plane>
 					<a-plane
-							material="src: #doubleCloud; roughness:0; transparent:false; alphaTest:0.5"
+							material="src: #doubleCloud; roughness:0; depthWrite: false; transparent:false; alphaTest:0.5"
 							position="4 1 -8"
 							rotation="-90 0 0"
 							scale="7 7 7"
 						></a-plane>
 					<a-plane
-							material="src: #rain; roughness:0; depthWrite: false; transparent:false; alphaTest:0.5"
+							material="src: #rain; roughness:0; depthWrite: false; depthWrite: false; transparent:false; alphaTest:0.5"
 							position="0 0 -2"
 							rotation="-90 0 0"
 							scale="14 14 14"
 						></a-plane>
+					<a-plane
+							material="src: #boyRainy; roughness:0; transparent:false; depthWrite: false; alphaTest:0.5"
+							position="0 1 1"
+							rotation="-90 0 0"
+							scale="7 7 7"
+						></a-plane>
 				</a-entity>
 				<a-entity id="cloudy" scale="0 0 0">
 					<a-plane
-							material="src: #cloudSun; roughness:0; transparent:false; alphaTest:0.5"
+							material="src: #cloudSun; roughness:0; depthWrite: false; transparent:false; alphaTest:0.5"
 							position="-4 1 -8"
 							rotation="-90 0 0"
 							scale="7 7 7"
 						></a-plane>
 					<a-plane
-							material="src: #cloud; roughness:0; transparent:false; alphaTest:0.5"
+							material="src: #cloud; roughness:0; depthWrite: false; transparent:false; alphaTest:0.5"
 							position="1.5 1.2 -6.5"
 							rotation="-90 0 0"
 							scale="7 7 7"
 						></a-plane>
 					<a-plane
-							material="src: #doubleCloud; roughness:0; transparent:false; alphatest:0.5"
+							material="src: #doubleCloud; roughness:0; depthWrite: false; transparent:false; alphaTest:0.5"
 							position="4 1 -8"
+							rotation="-90 0 0"
+							scale="7 7 7"
+						></a-plane>
+					<a-plane
+							material="src: #boyCloudy; roughness:0; depthWrite: false; transparent:false; alphaTest:0.5"
+							position="0 1 1"
 							rotation="-90 0 0"
 							scale="7 7 7"
 						></a-plane>
@@ -100,13 +121,13 @@
 				<a-entity id="info-banner" scale="1 1 1" 
 					>
 					<a-plane
-							material="src: #banner; roughness:0; depthWrite: false; transparent:true; alphatest:1"
+							material="src: #banner; roughness:0; depthWrite: false; transparent:true; alphaTest:1"
 							position="0 1.0 -4"
 							rotation="-90 0 0"
 							scale="10 10 10"
 						></a-plane>
 					<a-plane
-							material="src: #thermo; roughness:0; depthWrite: false; transparent:true; alphatest:0.350"
+							material="src: #thermo; roughness:0; depthWrite: false; transparent:true; alphaTest:0.350"
 							position="3.5 1.2 -4"
 							rotation="-90 0 0"
 							scale="6 6 6"

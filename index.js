@@ -21,6 +21,7 @@ function DisplayWeatherGraphics(weather){
 	 
 	//slice last letter off the weather id
 	weather = weather.slice(0, weather.length-1);
+	weather = "03";
 	let whichIconsToDisplayString = null;
 	//identify which set of icons to display
 	switch(weather){
@@ -28,6 +29,7 @@ function DisplayWeatherGraphics(weather){
 			whichIconsToDisplayString = "sun"; 
 			weatherLabel.setAttribute("value", "Clear Skies");
 			weatherSubtitle.setAttribute("value", "Hello sunshine!");
+			console.log("aa");
 			break;
 		case "02": //few clouds
 			whichIconsToDisplayString = "sun";
